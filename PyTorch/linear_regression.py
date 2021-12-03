@@ -1,5 +1,6 @@
 import torch
 import random
+import numpy
 from d2l import torch as d2
 from matplotlib import pyplot as plt
 
