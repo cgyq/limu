@@ -20,11 +20,13 @@ next(iter(data_iter))
 from torch import nn
 
 net = nn.Sequential(nn.Linear(2, 1))
+# 构造网络
 
 net[0].weight.data.normal_(0, 0.01)
 net[0].bias.data.fill_(0)
 
 loss = nn.MSELoss()
+# 即均方误差
 trainer = torch.optim.SGD(net.parameters(), lr=0.03)
 
 num_epochs = 3
