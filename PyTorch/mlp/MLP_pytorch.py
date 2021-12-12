@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     def init_weights(m):
         if type(m) == nn.Linear:
-            nn.init.normal_(m.weight, std=0.01)
-            # nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
+            # nn.init.normal_(m.weight, std=0.01)
+            nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
 
     net.apply(init_weights)
 
